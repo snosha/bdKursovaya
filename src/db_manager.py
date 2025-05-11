@@ -4,7 +4,7 @@ from src.db_config import DB_CONFIG
 
 class DBManager:
     def __init__(self):
-        # Убираем передаваемый dbname, если он уже есть в DB_CONFIG
+
         self.connection = psycopg2.connect(**DB_CONFIG)
         self.cursor = self.connection.cursor()
 
