@@ -5,6 +5,7 @@ import os
 
 load_dotenv()
 
+
 def insert_vacancies(company_id: int):
     """Получаем вакансии для компании и вставляем в базу данных"""
     hh_api = HeadHunterAPI()

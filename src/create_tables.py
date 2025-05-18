@@ -1,5 +1,6 @@
 import psycopg2
 
+
 def create_tables():
     conn = psycopg2.connect(
         host="localhost",
@@ -33,6 +34,7 @@ def create_tables():
     cur.close()
     conn.close()
     print("Таблицы успешно созданы.")
+
 
 if __name__ == "__main__":
     create_tables()

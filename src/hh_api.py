@@ -2,6 +2,7 @@ import requests
 import time
 from typing import List, Dict, Optional
 
+
 class HeadHunterAPI:
     BASE_URL = "https://api.hh.ru"
 

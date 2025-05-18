@@ -8,12 +8,11 @@ class DBManager:
         self.connection = psycopg2.connect(**DB_CONFIG)
         self.cursor = self.connection.cursor()
 
-
     def get_companies_and_vacancies_count(self):
         """Получить список всех компаний и количество вакансий у каждой компании."""
         query = """
-            SELECT c.title, COUNT(v.id) 
-            FROM companies c 
+            SELECT c.title, COUNT(v.id)
+            FROM companies c
             LEFT JOIN vacancies v ON c.id = v.company_id
             GROUP BY c.id;
         """

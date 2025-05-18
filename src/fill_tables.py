@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def insert_companies():
     """Добавление компаний в таблицу companies через API"""
     hh_api = HeadHunterAPI()
@@ -37,6 +38,7 @@ def insert_companies():
     connection.commit()
     cursor.close()
     connection.close()
+
 
 def insert_vacancies():
     """Добавление вакансий в таблицу vacancies через API"""
@@ -73,6 +75,8 @@ def insert_vacancies():
     connection.close()
 
 # Функция для добавления данных в обе таблицы
+
+
 def fill_tables():
     insert_companies()
     insert_vacancies()
